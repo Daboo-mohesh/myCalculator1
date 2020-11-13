@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+		<title>My Calculator</title>
+	</head>
+	<body>
+		<div data-role="page" id="page1" data-theme="a">
+			<div data-role="header">
+				<h1>Simple Calculator</h1>
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#page1" data-icon="home">Home</a></li>
+						<li><a href="#page2" data-icon="grid">Calculator</a></li>
+						<li><a href="#pageHelp" data-icon="info">Help</a></li>
+					</ul>
+				</div>
+			</div>
+			<div data-role="body">
+				<p>This is a jQuery mobile exercise which provides the user with a calculator for basic mathematical operations</p>			
+			</div>
+			<div data-role="footer">
+				<h1>Homework</h1>
+			</div>
+		</div>
+		
+		<div data-role="page" id="page2" data-theme="a">
+			<div data-role="header">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#page1" data-icon="home">Home</a></li>
+						<li><a href="#page2" data-icon="grid">Calculator</a></li>
+						<li><a href="#pageHelp" data-icon="info">Help</a></li>
+					</ul>
+				</div>
+			</div>
+			<div data-role="body">
+				<form>
+					<input type="text" id="number1" placeholder="Enter number"/>
+						<div class="ui-field-contain">
+							<select name="select-native-1" id="dropdown">
+								<option value="1"> + </option>
+								<option value="2"> - </option>
+								<option value="3"> * </option>
+								<option value="4"> / </option>
+							</select>
+						</div>
+						<input type="text" id="number2" placeholder="Enter number "/>
+						<a href="#pageResult" id="btnSubmit" onclick="calculate()" class="ui-btn">Calculate</a>
+				</form>
+		</div>
+			<div data-role="footer">
+				<h1>Homework</h1>
+			</div>
+		</div>
+		
+		<div data-role="page" id="pageResult">
+			<div data-role="header">
+				<h1>Results</h1>
+			</div>
+			<div data-role="body">
+				<h3>Operation</h3>
+				<p id="result"></p
+				<p>Results</p>
+				<p id="answer"></p>
+				<a href="#" data-rel="back" data-icon="back" class="ui-btn ui-icon-back ui-btn-icon-left">Back</a>
+			</div>
+			<div data-role="footer">
+				<h1>Homework</h1>
+			</div>
+		</div>
+		
+		<div data-role="page" id="pageHelp">
+			<div data-role="header">
+				<h1>More Info</h1>
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#page1" data-icon="home">Home</a></li>
+						<li><a href="#page2" data-icon="grid">Calculator</a></li>
+						<li><a href="#pageHelp" data-icon="info">Help</a></li>
+					</ul>
+				</div>
+			</div>
+			<div data-role="body">
+				<p>This is the help section and provides basic information about how to use the calculator</p>
+				<a href="#page4" class="ui-btn ui-icon-info ui-btn-icon-left">More info</a>
+			</div>
+			<div data-role="footer">
+				<h1>Homework</h1>
+			</div>
+		</div>
+		
+		<div data-role="page" id="page4" data-dialog="true">
+			<div data-role="header">
+				<a href="#" class="ui-btn ui-btn-left ui-icon-delete">Cancel</a>
+				<h1>More Info</h1>
+			</div>
+			<div data-role="body">
+				<p>You have requested more info from the App!</p>
+				<a href="#pageHelp" class="ui-btn ui-btn-back">Dismiss</a>
+			</div>
+		</div>
+		
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery.mobile-1.4.5.js"></script>
+		<script src="js/main.js"></script>
+		<script src="cordova.js"></script>
+	</body>
+</html>
